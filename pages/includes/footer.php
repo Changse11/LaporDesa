@@ -1,7 +1,7 @@
 <footer>
   <div>
     <div class="footer-brand">LaporKades</div>
-    <div class="footer-copy">© 2024 LaporKades Village Administration. All Rights Reserved.</div>
+    <div class="footer-copy">© 2026 LaporKades Village Administration. All Rights Reserved.</div>
   </div>
   <ul class="footer-links">
     <li><a href="#">Privacy Policy</a></li>
