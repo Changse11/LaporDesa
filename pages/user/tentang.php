@@ -8,7 +8,7 @@ include '../includes/nav.php';
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tentang – LaporKades</title>
+  <title>Tentang – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/user.css"/>
   
 </head>
@@ -16,8 +16,8 @@ include '../includes/nav.php';
   <main>
 
     <div class="tentang-header animate">
-      <h1>Tentang LaporKades</h1>
-      <p>LaporKades adalah sistem pengaduan dan aspirasi rakyat yang dibuat khusus untuk masyarakat Desa Kutapohaci. Platform ini hadir sebagai jembatan komunikasi antara warga dan pemerintah desa, agar setiap suara dapat didengar dan ditindaklanjuti dengan cepat, transparan, serta akuntabel.</p>
+      <h1>Tentang LaporDesa</h1>
+      <p>LaporDesa adalah sistem pengaduan dan aspirasi rakyat yang dibuat khusus untuk masyarakat Desa Kutapohaci. Platform ini hadir sebagai jembatan komunikasi antara warga dan pemerintah desa, agar setiap suara dapat didengar dan ditindaklanjuti dengan cepat, transparan, serta akuntabel.</p>
     </div>
 
     <div class="visi-tujuan animate delay-1">
@@ -40,7 +40,7 @@ include '../includes/nav.php';
           </svg>
         </div>
         <h3>Tujuan</h3>
-        <p>Dengan adanya LaporKades, diharapkan setiap warga Desa Kutapohaci dapat berperan aktif dalam membangun desa. Setiap laporan, kritik, maupun saran akan menjadi bahan evaluasi dan perbaikan demi kesejahteraan bersama.</p>
+        <p>Dengan adanya LaporDesa, diharapkan setiap warga Desa Kutapohaci dapat berperan aktif dalam membangun desa. Setiap laporan, kritik, maupun saran akan menjadi bahan evaluasi dan perbaikan demi kesejahteraan bersama.</p>
       </div>
     </div>
 

@@ -225,6 +225,96 @@ h1 {
   pointer-events: none;
 }
 
+/* === PASSWORD VISIBILITY TOGGLE === */
+.password-wrapper {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.password-wrapper input {
+  display: block;
+  width: 100%;
+  padding: 11px 44px 11px 14px !important;
+  line-height: normal;
+  border: 1.5px solid var(--border);
+  border-radius: var(--input-radius);
+  font-family: "Plus Jakarta Sans", sans-serif;
+  font-size: 0.875rem;
+  color: var(--text-dark);
+  background: var(--bg-white);
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+}
+
+.password-wrapper input::placeholder {
+  color: #b0b8c1;
+}
+
+.password-wrapper input:focus {
+  border-color: var(--green-light);
+  box-shadow: 0 0 0 3px rgba(74, 158, 104, 0.12);
+}
+
+.password-wrapper input.is-error {
+  border-color: #e53e3e;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--text-muted);
+  padding: 0;
+  transition:
+    color 0.2s,
+    background 0.2s;
+}
+
+.toggle-password:hover {
+  color: var(--green-dark);
+  background: rgba(61, 122, 82, 0.08);
+}
+
+.toggle-password:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(74, 158, 104, 0.18);
+}
+
+.toggle-password .icon-eye,
+.toggle-password .icon-eye-off {
+  width: 19px;
+  height: 19px;
+  pointer-events: none;
+}
+
+/* Default: ikon mata terbuka terlihat, mata tercoret tersembunyi */
+.toggle-password .icon-eye-off {
+  display: none;
+}
+
+/* Saat password sedang ditampilkan, tukar ikonnya */
+.toggle-password.is-visible .icon-eye {
+  display: none;
+}
+
+.toggle-password.is-visible .icon-eye-off {
+  display: block;
+}
+
 /* === PASSWORD LABEL ROW === */
 .label-row {
   display: flex;

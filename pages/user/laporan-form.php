@@ -33,7 +33,7 @@ include '../includes/nav.php';
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Buat Laporan – LaporKades</title>
+  <title>Buat Laporan – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/user.css"/>
 </head>
 <body class="tab-<?= strtolower($active_tab) ?>">

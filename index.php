@@ -6,7 +6,7 @@ include 'pages/includes/nav.php';
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Home – LaporKades</title>
+  <title>Home – LaporDesa</title>
   <link rel="stylesheet" href="/RPL/assets/css/user.css"/>
   
 </head>
@@ -16,7 +16,7 @@ include 'pages/includes/nav.php';
       <div class="hero-text">
         <div class="hero-badge"><span>🏛️</span> Portal Resmi Desa</div>
         <h1>Suarakan Aspirasi Anda untuk Desa yang Lebih Baik</h1>
-        <p>LaporKades adalah platform digital transparan untuk menyampaikan keluhan, saran, dan aspirasi langsung kepada pemerintah desa. Kami memastikan setiap suara didengar demi kemajuan bersama.</p>
+        <p>LaporDesa adalah platform digital transparan untuk menyampaikan keluhan, saran, dan aspirasi langsung kepada pemerintah desa. Kami memastikan setiap suara didengar demi kemajuan bersama.</p>
         <div class="hero-actions">
           <a href="/RPL/pages/user/laporan-form.php" class="btn btn-primary">Mulai Lapor →</a>
           <a href="/RPL/pages/user/tentang.php" class="btn btn-outline">Pelajari Selengkapnya</a>
@@ -29,7 +29,7 @@ include 'pages/includes/nav.php';
 
     <section class="how-section animate delay-2">
       <div class="section-title">
-        <h2>Bagaimana LaporKades Bekerja?</h2>
+        <h2>Bagaimana LaporDesa Bekerja?</h2>
         <p>Proses pelaporan dirancang agar mudah, transparan, dan dapat dilacak oleh seluruh warga desa tanpa birokrasi yang rumit.</p>
       </div>
       <div class="steps-grid">

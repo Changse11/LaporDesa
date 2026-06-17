@@ -27,7 +27,7 @@ $hari_ini = $conn->query("
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard – LaporKades</title>
+  <title>Dashboard – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/user.css"/>
 </head>
 <body>
@@ -38,7 +38,7 @@ $hari_ini = $conn->query("
 
     <div class="dash-header animate">
       <h1>Dashboard Statistik Laporan</h1>
-      <p>Ringkasan data laporan pengaduan dan aspirasi warga yang telah masuk ke sistem LaporKades.</p>
+      <p>Ringkasan data laporan pengaduan dan aspirasi warga yang telah masuk ke sistem LaporDesa.</p>
     </div>
 
     <!-- Total Keseluruhan -->

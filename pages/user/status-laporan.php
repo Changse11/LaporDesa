@@ -3,7 +3,7 @@ include '../lib/koneksi.php';
 if (session_status() === PHP_SESSION_NONE) session_start();
 
 if (!isset($_SESSION['id_user'])) {
-    header('Location: /RPL/pages/auth/masuk.php'); exit;
+    header('Location: /pages/auth/masuk.php'); exit;
 }
 
 $id_user       = $_SESSION['id_user'];
@@ -75,7 +75,7 @@ include '../includes/nav.php';
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Status Laporan – LaporKades</title>
+  <title>Status Laporan – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/user.css"/>
 </head>
 <body>
@@ -126,45 +126,46 @@ include '../includes/nav.php';
         <a href="laporan-form.php" class="btn btn-primary" style="margin-top:8px;">+ Buat Laporan Baru</a>
       </div>
     <?php else: ?>
-      <table>
-        <thead>
-          <tr>
-            <th>No. Laporan</th>
-            <th>Tgl Kirim</th>
-            <th>Judul</th>
-            <th>Kategori</th>
-            <th>Jenis</th>
-            <th>Status</th>
-            <th>Detail</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php foreach ($rows as $r): ?>
-          <tr>
-            <td class="td-id"><?= htmlspecialchars($r['nomor_laporan']) ?></td>
-            <td class="td-date"><?= date('d M Y', strtotime($r['tanggal_laporan'])) ?></td>
-            <td class="td-title"><?= htmlspecialchars($r['judul']) ?></td>
-            <td class="td-category"><?= htmlspecialchars($r['nama_kategori']) ?></td>
-            <td>
-              <span class="badge <?= $r['jenis_laporan'] === 'Pengaduan' ? 'badge-yellow' : 'badge-blue' ?>">
-                <?= htmlspecialchars($r['jenis_laporan']) ?>
-              </span>
-            </td>
-            <td><?= statusBadge($r['status_laporan']) ?></td>
-            <td>
-              <a href="detail-laporan.php?nomor=<?= urlencode($r['nomor_laporan']) ?>" class="btn-detail">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                  <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
-                  <circle cx="12" cy="12" r="3"/>
-                </svg>
-                Lihat
-              </a>
-            </td>
-          </tr>
-          <?php endforeach; ?>
-        </tbody>
-      </table>
-
+      <div class="table-scroll">
+        <table>
+          <thead>
+            <tr>
+              <th>No. Laporan</th>
+              <th>Tgl Kirim</th>
+              <th>Judul</th>
+              <th>Kategori</th>
+              <th>Jenis</th>
+              <th>Status</th>
+              <th>Detail</th>
+            </tr>
+          </thead>
+          <tbody>
+            <?php foreach ($rows as $r): ?>
+            <tr>
+              <td class="td-id"><?= htmlspecialchars($r['nomor_laporan']) ?></td>
+              <td class="td-date"><?= date('d M Y', strtotime($r['tanggal_laporan'])) ?></td>
+              <td class="td-title"><?= htmlspecialchars($r['judul']) ?></td>
+              <td class="td-category"><?= htmlspecialchars($r['nama_kategori']) ?></td>
+              <td>
+                <span class="badge <?= $r['jenis_laporan'] === 'Pengaduan' ? 'badge-yellow' : 'badge-blue' ?>">
+                  <?= htmlspecialchars($r['jenis_laporan']) ?>
+                </span>
+              </td>
+              <td><?= statusBadge($r['status_laporan']) ?></td>
+              <td>
+                <a href="detail-laporan.php?nomor=<?= urlencode($r['nomor_laporan']) ?>" class="btn-detail">
+                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                    <circle cx="12" cy="12" r="3"/>
+                  </svg>
+                  Lihat
+                </a>
+              </td>
+            </tr>
+            <?php endforeach; ?>
+          </tbody>
+        </table>
+      </div>
       <div class="table-footer">
         <p>Menampilkan <?= $offset + 1 ?>–<?= min($offset + $per_page, $total_rows) ?> dari <?= $total_rows ?> laporan</p>
         <?php if ($total_pages > 1): ?>

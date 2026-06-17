@@ -64,7 +64,7 @@ function renderPrioritasCard($result, $label, $color, $badge_class, $link_detail
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title><?= $page_title ?> - LaporKades</title>
+  <title><?= $page_title ?> - LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/admin.css"/>
 </head>
 <body>

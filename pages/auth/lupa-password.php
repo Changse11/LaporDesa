@@ -42,7 +42,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Reset Password – LaporKades</title>
+  <title>Reset Password – LaporDesa</title>
 </head>
 <body style="margin:0;padding:0;background-color:#f4f6f8;font-family:'Segoe UI',Arial,sans-serif;">
 
@@ -65,7 +65,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </svg>
                   </td>
                   <td style="vertical-align:middle;">
-                    <span style="color:#ffffff;font-size:22px;font-weight:700;letter-spacing:0.5px;">LaporKades</span>
+                    <span style="color:#ffffff;font-size:22px;font-weight:700;letter-spacing:0.5px;">LaporDesa</span>
                   </td>
                 </tr>
               </table>
@@ -94,7 +94,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
               <p style="font-size:15px;color:#374151;margin:0 0 8px;">Halo, <strong>{$nama}</strong></p>
               <p style="font-size:15px;color:#374151;line-height:1.6;margin:0 0 24px;">
-                Kami menerima permintaan untuk mereset password akun LaporKades Anda.
+                Kami menerima permintaan untuk mereset password akun LaporDesa Anda.
                 Klik tombol di bawah ini untuk membuat password baru.
               </p>
 
@@ -142,7 +142,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <tr>
             <td style="background:#f9fafb;border-radius:0 0 12px 12px;padding:20px 40px;text-align:center;border-top:1px solid #e5e7eb;">
               <p style="margin:0 0 4px;font-size:12px;color:#9ca3af;">
-                &copy; {$tahun} LaporKades &mdash; Sistem Administrasi Warga Terpadu
+                &copy; {$tahun} LaporDesa &mdash; Sistem Administrasi Warga Terpadu
               </p>
               <p style="margin:0;font-size:12px;color:#d1d5db;">
                 Email ini dikirim secara otomatis, harap tidak membalas.
@@ -160,7 +160,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 HTML;
 
             // Plain text fallback
-            $plain_body = "Halo {$nama},\n\nKami menerima permintaan reset password untuk akun LaporKades Anda.\n\nKlik link berikut untuk reset password (berlaku 5 menit):\n{$reset_link}\n\nJika Anda tidak meminta ini, abaikan email ini.\n\n© {$tahun} LaporKades";
+            $plain_body = "Halo {$nama},\n\nKami menerima permintaan reset password untuk akun LaporDesa Anda.\n\nKlik link berikut untuk reset password (berlaku 5 menit):\n{$reset_link}\n\nJika Anda tidak meminta ini, abaikan email ini.\n\n© {$tahun} LaporDesa";
 
             // Kirim Email via PHPMailer
             $mail = new PHPMailer(true);
@@ -174,12 +174,12 @@ HTML;
                 $mail->Port       = 587;
                 $mail->CharSet    = 'UTF-8';
 
-                $mail->setFrom('lapordesakutapohaci@gmail.com', 'LaporKades');
+                $mail->setFrom('lapordesakutapohaci@gmail.com', 'LaporDesa');
                 $mail->addAddress($email, $nama);
-                $mail->addReplyTo('no-reply@laporkades.id', 'No Reply');
+                $mail->addReplyTo('no-reply@LaporDesa.id', 'No Reply');
 
                 $mail->isHTML(true);
-                $mail->Subject = '🔐 Reset Password – LaporKades';
+                $mail->Subject = '🔐 Reset Password – LaporDesa';
                 $mail->Body    = $html_body;
                 $mail->AltBody = $plain_body;
 
@@ -208,7 +208,7 @@ HTML;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Lupa Password – LaporKades</title>
+  <title>Lupa Password – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/auth.css" />
 </head>
 <body>
@@ -224,7 +224,7 @@ HTML;
           <line x1="9" y1="21" x2="9" y2="14"/>
           <line x1="15" y1="21" x2="15" y2="14"/>
         </svg>
-        <div class="brand-name">LaporKades</div>
+        <div class="brand-name">LaporDesa</div>
         <div class="brand-sub">Sistem Administrasi Warga<br>Terpadu</div>
       </div>
     </div>

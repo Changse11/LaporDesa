@@ -53,7 +53,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $token_valid) {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Reset Password – LaporKades</title>
+  <title>Reset Password – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/auth.css" />
 </head>
 <body>
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $token_valid) {
           <line x1="9" y1="21" x2="9" y2="14"/>
           <line x1="15" y1="21" x2="15" y2="14"/>
         </svg>
-        <div class="brand-name">LaporKades</div>
+        <div class="brand-name">LaporDesa</div>
         <div class="brand-sub">Sistem Administrasi Warga<br>Terpadu</div>
       </div>
     </div>

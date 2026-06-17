@@ -4,7 +4,7 @@ if (session_status() === PHP_SESSION_NONE) session_start();
 
 // Kalau sudah login, redirect
 if (isset($_SESSION['id_user'])) {
-    header('Location: ' . ($_SESSION['role'] === 'admin' ? '/RPL/pages/admin/dashboard.php' : '/RPL/pages/user/home.php'));
+    header('Location: ' . ($_SESSION['role'] === 'admin' ? '/pages/admin/dashboard.php' : '/pages/user/home.php'));
     exit;
 }
 
@@ -96,7 +96,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Daftar – LaporKades</title>
+  <title>Daftar – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/auth.css" />
 </head>
 <body>
@@ -112,7 +112,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
           <line x1="9" y1="21" x2="9" y2="14"/>
           <line x1="15" y1="21" x2="15" y2="14"/>
         </svg>
-        <div class="brand-name">LaporKades</div>
+        <div class="brand-name">LaporDesa</div>
         <div class="brand-sub">Sistem Administrasi Warga<br>Terpadu</div>
       </div>
     </div>
@@ -212,15 +212,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
           <div class="field">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" placeholder="Minimal 8 karakter"
-                   class="<?= isset($errors['password']) ? 'is-error' : '' ?>" />
+            <div class="password-wrapper">
+              <input type="password" id="password" name="password" placeholder="Minimal 8 karakter"
+                     class="<?= isset($errors['password']) ? 'is-error' : '' ?>" />
+              <button type="button" class="toggle-password" data-target="password" aria-label="Tampilkan password">
+                <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a18.36 18.36 0 0 1 4.06-5.06M9.9 4.24A10.94 10.94 0 0 1 12 5c7 0 11 7 11 7a18.5 18.5 0 0 1-2.16 3.19M14.12 14.12a3 3 0 1 1-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
             <?php if (isset($errors['password'])): ?><span class="error-msg"><?= $errors['password'] ?></span><?php endif; ?>
           </div>
 
           <div class="field">
             <label for="konfirmasi">Konfirmasi Password</label>
-            <input type="password" id="konfirmasi" name="konfirmasi" placeholder="Ketik ulang password"
-                   class="<?= isset($errors['konfirmasi']) ? 'is-error' : '' ?>" />
+            <div class="password-wrapper">
+              <input type="password" id="konfirmasi" name="konfirmasi" placeholder="Ketik ulang password"
+                     class="<?= isset($errors['konfirmasi']) ? 'is-error' : '' ?>" />
+              <button type="button" class="toggle-password" data-target="konfirmasi" aria-label="Tampilkan password">
+                <svg class="icon-eye" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7-11-7-11-7Z"/>
+                  <circle cx="12" cy="12" r="3"/>
+                </svg>
+                <svg class="icon-eye-off" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M17.94 17.94A10.94 10.94 0 0 1 12 19c-7 0-11-7-11-7a18.36 18.36 0 0 1 4.06-5.06M9.9 4.24A10.94 10.94 0 0 1 12 5c7 0 11 7 11 7a18.5 18.5 0 0 1-2.16 3.19M14.12 14.12a3 3 0 1 1-4.24-4.24"/>
+                  <line x1="1" y1="1" x2="23" y2="23"/>
+                </svg>
+              </button>
+            </div>
             <?php if (isset($errors['konfirmasi'])): ?><span class="error-msg"><?= $errors['konfirmasi'] ?></span><?php endif; ?>
           </div>
 
@@ -235,5 +259,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     </div>
 
   </div>
+
+  <script>
+    document.querySelectorAll('.toggle-password').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var targetId = btn.getAttribute('data-target');
+        var input = document.getElementById(targetId);
+        var willShow = input.type === 'password';
+        input.type = willShow ? 'text' : 'password';
+        btn.classList.toggle('is-visible', willShow);
+        btn.setAttribute('aria-label', willShow ? 'Sembunyikan password' : 'Tampilkan password');
+      });
+    });
+  </script>
 </body>
 </html>

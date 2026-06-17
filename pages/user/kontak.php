@@ -8,7 +8,7 @@ include '../includes/nav.php';
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Kontak – LaporKades</title>
+  <title>Kontak – LaporDesa</title>
   <link rel="stylesheet" href="../../assets/css/user.css"/>
 </head>
 <body>
@@ -18,7 +18,7 @@ include '../includes/nav.php';
 
       <div class="kontak-header animate">
         <h1>Kontak Kami</h1>
-        <p>Kami siap mendengar setiap pengaduan, aspirasi, maupun saran dari masyarakat Desa Wonokerso. Jika ada pertanyaan silahkan hubungi kami melalui kontak berikut:</p>
+        <p>Kami siap mendengar setiap pengaduan, aspirasi, maupun saran dari masyarakat Desa Kutapohaci. Jika ada pertanyaan silahkan hubungi kami melalui kontak berikut:</p>
       </div>
 
       <div class="kontak-grid animate delay-1">
