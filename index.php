@@ -70,7 +70,7 @@ include 'pages/includes/nav.php';
         <h2>Siap Berkontribusi?</h2>
         <p>Setiap aspirasi Anda sangat berarti bagi pembangunan desa. Mari bersama-sama wujudkan lingkungan yang lebih baik.</p>
       </div>
-      <button class="btn-cta" onclick="window.location.href='/RPL/pages/user/laporan-pengaduan.php'">Buat Laporan Sekarang</button>
+      <button class="btn-cta" onclick="window.location.href='/RPL/pages/user/laporan-form.php'">Buat Laporan Sekarang</button>
     </div>
   </main>
 
