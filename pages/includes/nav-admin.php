@@ -10,7 +10,7 @@ $active_hist  = in_array($current, ['histori.php', 'detail-histori.php']) ? 'act
 $admin_name = $_SESSION['user']['nama_lengkap'] ?? 'Admin';
 ?>
 <aside class="sidebar">
-  <div class="sidebar-logo">LaporKades</div>
+  <div class="sidebar-logo">LaporDesa</div>
   <nav class="sidebar-nav">
     <a href="dashboard.php" class="<?= $active_dash ?>">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/></svg>

@@ -1,5 +1,5 @@
 <nav class="navbar">
-  <a href="/RPL/pages/user/home.php" class="navbar-brand">LaporKades</a>
+  <a href="/RPL/pages/user/home.php" class="navbar-brand">LaporDesa</a>
 
   <ul class="navbar-nav" id="navMenu">
     <?php
